@@ -11,7 +11,7 @@ public class DetectDrop : MonoBehaviour
             Debug.Log("droppable item in drop zone");
             //get points
             status.AddScore();
-            Destroy(collider);
+            //Destroy(collider);
         }
         if (collider.gameObject.tag == "Valuable"){
             Debug.Log("valuable item in drop zone");
