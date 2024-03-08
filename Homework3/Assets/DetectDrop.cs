@@ -18,5 +18,8 @@ public class DetectDrop : MonoBehaviour
             //lose points
             status.LoseScore();
         }
+        //if (collider.gameObject.tag == "Candle"){
+
+        //}
     }
 }

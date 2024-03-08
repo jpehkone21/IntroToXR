@@ -9,14 +9,15 @@ public class DetectValuable : MonoBehaviour
     {
         if( collider.gameObject.tag == "Valuable"){
             Debug.Log("valuable item in valuable zone");
+            collider.gameObject.tag = "Untagged";
             //get points
             status.AddScore();
             //Destroy(collider.gameObject);
-        }
+        }/*
         if (collider.gameObject.tag == "Droppable"){
             Debug.Log("droppable item in valuable zone");
             //lose points
             status.LoseScore();
-        }
+        }*/
     }
 }

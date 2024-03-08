@@ -7,6 +7,8 @@ TagManager:
   - Grabbable
   - Droppable
   - Valuable
+  - Hand
+  - Candle
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - Water
   - UI
   - Secret
-  - 
-  - 
+  - hands
+  - interactive
   - 
   - 
   - 

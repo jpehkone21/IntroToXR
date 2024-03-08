@@ -19,4 +19,8 @@ public class GameStatus : MonoBehaviour
     score_text.SetText(score.ToString());
    }
 
+   public int GetScore(){
+    return score;
+   }
+
 }
