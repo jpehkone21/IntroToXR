@@ -28,7 +28,7 @@ public class squeeze : MonoBehaviour
             //presser = other.gameObject;
             //onPress.Invoke();
             isSqueezed = true;
-            status.AddScore();
+            //status.AddScore();
             mouse.transform.parent = null;
         }
         }

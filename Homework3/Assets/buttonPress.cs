@@ -22,14 +22,14 @@ public class buttonPress : MonoBehaviour
         if(!isPressed){
             button.transform.localPosition = new Vector3(0, 0.4f, 0);
             presser = other.gameObject;
-            onPress.Invoke();
+            //onPress.Invoke();
             isPressed = true;
         }
     }
     private void OnTriggerExit(Collider other){
         if (other.gameObject == presser){
             //Debug.Log("trigger exit");
-            button.transform.localPosition += new Vector3(0, 0.4f, 0); 
+            button.transform.localPosition = new Vector3(0, 1f, 0); 
             Invoke("movePlayer", 1);
             timer.timerIsRunning = true;
             isPressed = false;
@@ -37,7 +37,8 @@ public class buttonPress : MonoBehaviour
     }
     public GameObject player;
     public void movePlayer(){
-        player.transform.position = new Vector3(0.45f, 0.5f, -0.14f); 
+        player.transform.position = new Vector3(0.45f, -0.5f, -0.14f); 
+        player.transform.eulerAngles = new Vector3(0, 0, 0); 
     }
 
     

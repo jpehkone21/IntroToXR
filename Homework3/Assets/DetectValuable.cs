@@ -12,6 +12,10 @@ public class DetectValuable : MonoBehaviour
             collider.gameObject.tag = "Untagged";
             //get points
             status.AddScore();
+            status.AddScore();
+            status.AddScore();
+            status.AddScore();
+            status.AddScore();
             //Destroy(collider.gameObject);
         }/*
         if (collider.gameObject.tag == "Droppable"){

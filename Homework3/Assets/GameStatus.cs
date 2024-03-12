@@ -8,6 +8,10 @@ public class GameStatus : MonoBehaviour
 {
     public static int score = 0;
     public TMP_Text score_text;
+
+    void Awake(){
+        score = 0;
+    }
    
    public void AddScore(){
     score++;

@@ -12,6 +12,8 @@ public class timer : MonoBehaviour
     public InputActionReference action; //action to start over
     public TMP_Text final_score; //text in game ended plane
     public GameStatus status;
+    public Light light;
+    private float light_timer;
 
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
@@ -30,8 +32,17 @@ public class timer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
+                if(timeRemaining <= 5){
+                    light_timer += Time.deltaTime;
+                    if (light_timer > 0.5f){
+                        light.enabled = !light.enabled;
+                        light_timer -= 0.5f;
+                    }
+                }
+                
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+
             }
             else
             {
